@@ -8,7 +8,8 @@
             "DeploymentBucketName": "list-default-20191202172403-deployment",
             "UnauthRoleName": "list-default-20191202172403-unauthRole",
             "StackName": "list-default-20191202172403",
-            "StackId": "arn:aws:cloudformation:ap-northeast-1:846058660752:stack/list-default-20191202172403/198c1440-14dd-11ea-9279-0a238b45858e"
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:846058660752:stack/list-default-20191202172403/198c1440-14dd-11ea-9279-0a238b45858e",
+            "AmplifyAppId": "d3awxdxuv0b2t"
         },
         "categories": {
             "auth": {
