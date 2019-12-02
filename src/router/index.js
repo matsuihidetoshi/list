@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import List from '../components/List.vue'
+import List from '@/components/List.vue'
 
 Vue.use(VueRouter)
 

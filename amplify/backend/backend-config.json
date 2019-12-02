@@ -1,0 +1,9 @@
+{
+	"auth": {
+		"listb34744ad": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}
