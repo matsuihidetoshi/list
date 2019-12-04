@@ -48,12 +48,12 @@ export default {
     },
     displayPrivateNotes: async function () {
       let privateNotes = await API.graphql(graphqlOperation(
-        listPrivateNotes, {limit: 99999}
+        listPrivateNotes, {limit: 999999999}
       ))
       this.privateNotes = _.orderBy(privateNotes.data.listPrivateNotes.items, 'updatedAt', 'desc').slice(0, 100)
       
-     API.graphql(
-        graphqlOperation(onCreatePrivateNote, {limit: 99999, owner: this.owner})
+      API.graphql(
+        graphqlOperation(onCreatePrivateNote, {limit: 999999999, owner: this.owner})
       ).subscribe({
         next: (eventData) => {
           const privateNote = eventData.value.data.onCreatePrivateNote
