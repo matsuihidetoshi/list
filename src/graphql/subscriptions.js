@@ -32,6 +32,7 @@ export const onCreatePrivateNote = `subscription OnCreatePrivateNote($owner: Str
   onCreatePrivateNote(owner: $owner) {
     id
     content
+    updatedAt
     owner
   }
 }
@@ -40,6 +41,7 @@ export const onUpdatePrivateNote = `subscription OnUpdatePrivateNote($owner: Str
   onUpdatePrivateNote(owner: $owner) {
     id
     content
+    updatedAt
     owner
   }
 }
@@ -48,6 +50,7 @@ export const onDeletePrivateNote = `subscription OnDeletePrivateNote($owner: Str
   onDeletePrivateNote(owner: $owner) {
     id
     content
+    updatedAt
     owner
   }
 }

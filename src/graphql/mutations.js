@@ -44,6 +44,7 @@ export const createPrivateNote = `mutation CreatePrivateNote(
   createPrivateNote(input: $input, condition: $condition) {
     id
     content
+    updatedAt
     owner
   }
 }
@@ -55,6 +56,7 @@ export const updatePrivateNote = `mutation UpdatePrivateNote(
   updatePrivateNote(input: $input, condition: $condition) {
     id
     content
+    updatedAt
     owner
   }
 }
@@ -66,6 +68,7 @@ export const deletePrivateNote = `mutation DeletePrivateNote(
   deletePrivateNote(input: $input, condition: $condition) {
     id
     content
+    updatedAt
     owner
   }
 }

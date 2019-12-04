@@ -30,6 +30,7 @@ export const getPrivateNote = `query GetPrivateNote($id: ID!) {
   getPrivateNote(id: $id) {
     id
     content
+    updatedAt
     owner
   }
 }
@@ -43,6 +44,7 @@ export const listPrivateNotes = `query ListPrivateNotes(
     items {
       id
       content
+      updatedAt
       owner
     }
     nextToken

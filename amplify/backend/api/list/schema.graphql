@@ -16,4 +16,5 @@ type PrivateNote
 {
   id: ID!
   content: String!
+  updatedAt: String
 }
