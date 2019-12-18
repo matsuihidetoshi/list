@@ -29,7 +29,8 @@ export default {
       content: "",
       privateNote: null,
       privateNotes: [],
-      owner: localStorage.getItem("CognitoIdentityServiceProvider.aatdol2orqfecahcg2aqs0c1c.LastAuthUser")
+      owner: localStorage.getItem("CognitoIdentityServiceProvider.aatdol2orqfecahcg2aqs0c1c.LastAuthUser"),
+      limit: 2 ** 31 - 1
     }
   },
   mounted: function () {
@@ -48,12 +49,12 @@ export default {
     },
     displayPrivateNotes: async function () {
       let privateNotes = await API.graphql(graphqlOperation(
-        listPrivateNotes, {limit: 999999999}
+        listPrivateNotes, {limit: this.limit}
       ))
       this.privateNotes = _.orderBy(privateNotes.data.listPrivateNotes.items, 'updatedAt', 'desc').slice(0, 100)
       
       API.graphql(
-        graphqlOperation(onCreatePrivateNote, {limit: 999999999, owner: this.owner})
+        graphqlOperation(onCreatePrivateNote, {limit: this.limit, owner: this.owner})
       ).subscribe({
         next: (eventData) => {
           const privateNote = eventData.value.data.onCreatePrivateNote
